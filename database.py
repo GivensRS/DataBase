@@ -19,6 +19,7 @@ def get_text_messages(message):
         b = Output.OutputDB()
         #Каким-то чудом переделывает массив b в нумерованную строку с помощью enumerate
         for i, n in enumerate(b):
+            #Как это сделать, чтобы отправлялся текст, ну или таблица с данными, я честно хз, пытаюсь понять но не могу, расим помоги
             bot.send_message(message.from_user.id,f"{i + 1}. ", *n)
     if message.text.startswist("/db"):
         a = message.text[3:].split(" ")
