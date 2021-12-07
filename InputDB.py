@@ -5,7 +5,7 @@ def InputDB(country, trans, cost):
 
     cursor = test.cursor()
     cursor.execute("insert into Путешествия values (:country, :trans, :money)",
-                   {"country": country, "trans": trans, "money": int(cost)})
+                   {"country": country, "trans": trans, "money": cost})
     test.commit()
 
     test.close()
