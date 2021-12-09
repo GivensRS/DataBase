@@ -35,7 +35,19 @@ def give_output_db(message):
                 i = i + f + " "
                 if f == b[d][-1]:
                     i += "\n"
-        bot.reply_to(message, text=i)
+        if len(i) > 4096:
+            a = len(i)
+            n = 0
+            b = 0
+            while a > 4096:
+                b += 4096
+                bot.reply_to(message, text = i[n:b])
+                n+=4096
+                a -= 4096
+            if a > 0:
+                bot.reply_to(message, text = i[n:n+a])
+        else:
+            bot.reply_to(message, text=i)
 
 @bot.message_handler(content_types=['text'])
 def get_text_messages(message):
