@@ -4,7 +4,7 @@ import Output
 import telebot
 
 
-bot = telebot.TeleBot('1122158709:AAGrNF_UmJD0dt6Tr5Pq6ynYHvs10UkdoLg')
+bot = telebot.TeleBot('')
 
 def Pog(message):
     try:
